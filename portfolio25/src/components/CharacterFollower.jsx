@@ -88,7 +88,6 @@ export default function CharacterFollower() {
 
   return (
     <div
-    className="bg-black"
       ref={ref}
       style={{
         position: "fixed",
