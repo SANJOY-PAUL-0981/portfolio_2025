@@ -1,9 +1,11 @@
 import './App.css'
+import SplineModel from "./components/SplineModel"
 
 function App() {
+
   return (
     <>
-    <div className='bg-red-500'>Hi</div>
+    <div>HI</div>
     </>
   )
 }
