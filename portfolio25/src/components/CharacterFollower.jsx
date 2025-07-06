@@ -1,4 +1,4 @@
-// THIS IS A CUSTOM MADE VIBE CODED MOUSE POINTER FOLLOWER ;)
+// THIS IS A CUSTOM MADE VIBE CODED MOUSE POINTER FOLLOWER ;), vibe-coded by chatgpt
 
 import { useEffect, useRef, useState } from "react";
 
@@ -88,6 +88,7 @@ export default function CharacterFollower() {
 
   return (
     <div
+    className="bg-black"
       ref={ref}
       style={{
         position: "fixed",

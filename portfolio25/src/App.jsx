@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <div>HI
+    <div className='h-[100vh] bg-black'>HI
             <CharacterFollower />
 
     </div>
