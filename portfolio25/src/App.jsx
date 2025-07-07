@@ -1,11 +1,9 @@
 import './App.css'
 import SplineModel from "./components/UI/SplineModel"
 import CharacterFollower from './components/UI/CharacterFollower'
-import ShinyText from './components/UI/ShinyText'
-import GradientText from './components/UI/GradientText'
+import ClickSpark from './components/UI/ClickSpark'
 
 function App() {
-
   return (
     <>
       <CharacterFollower />
