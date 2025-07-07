@@ -1,1 +1,12 @@
 @import "tailwindcss";
+.font-dotgothic {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-vt323 {
+  font-family: 'VT323', monospace;
+}
