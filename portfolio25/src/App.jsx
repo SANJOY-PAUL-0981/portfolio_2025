@@ -1,9 +1,9 @@
 import './App.css'
-import SplineModel from "./components/UI/SplineModel"
-import CharacterFollower from './components/UI/CharacterFollower'
-import SpotlightCard from './components/UI/SpotlightCard'
+import SplineModel from "./components/ui/SplineModel"
+import CharacterFollower from './components/ui/CharacterFollower'
 
 function App() {
+
   return (
     <>
       <CharacterFollower />
