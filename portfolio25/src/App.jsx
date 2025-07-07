@@ -1,7 +1,7 @@
 import './App.css'
 import SplineModel from "./components/UI/SplineModel"
 import CharacterFollower from './components/UI/CharacterFollower'
-import ClickSpark from './components/UI/ClickSpark'
+import SpotlightCard from './components/UI/SpotlightCard'
 
 function App() {
   return (
