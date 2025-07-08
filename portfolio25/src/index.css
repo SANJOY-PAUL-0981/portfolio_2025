@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 .font-dotgothic {
   font-family: 'DotGothic16', sans-serif;
 }
@@ -18,3 +19,6 @@
 .font-vt323 {
   font-family: 'VT323', monospace;
 }
+
+@import 'pixel-retroui/dist/index.css';
+@import 'pixel-retroui/dist/fonts.css';
