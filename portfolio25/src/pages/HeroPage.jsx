@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa"
 import { useState } from "react"
 import { Socials } from "../components/Socials";
 import { Skills } from "../components/Skills";
+import RotatingText from "../components/ui/RotatingText"
 
 export const HeroPage = () => {
     const [copy, setCopy] = useState(false)
@@ -51,8 +52,20 @@ export const HeroPage = () => {
                             <p className="text-8xl font-vt323">
                                 Hi I am <b className="text-red-500">Sanjoy</b> :)
                             </p>
-                            <p className="text-red-500 font-dotgothic text-xl font-semibold">
-                                Nice to meet you all, I am a passionate Web developer and CS undergrad
+                            <p className="text-red-500 font-dotgothic text-xl font-semibold flex items-center gap-2">
+                                Nice to meet you all, I am a passionate
+                                <RotatingText
+                                    texts={['Web Developer', 'ML Enthusiast', 'CS Undergrad']}
+                                    mainClassName="px-2 w-[10vw] sm:px-2 md:px-3 bg-red-500 text-black overflow-hidden sm:py-1 md:py-2 justify-center rounded"
+                                    staggerFrom={"last"}
+                                    initial={{ y: "100%" }}
+                                    animate={{ y: 0 }}
+                                    exit={{ y: "-120%" }}
+                                    staggerDuration={0.025}
+                                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                    rotationInterval={2000}
+                                />
                             </p>
                         </div>
 
