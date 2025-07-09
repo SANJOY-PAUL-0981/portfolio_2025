@@ -1,10 +1,11 @@
 import SplineModel from "../components/ui/SplineModel"
-import CharacterFollower from "../components/ui/CharacterFollower"
 import Particles from "../components/Particles"
 import { Button } from 'pixel-retroui'
+import { Bubble } from 'pixel-retroui';
 import { IoMdCopy } from "react-icons/io"
 import { FaArrowRight } from "react-icons/fa"
 import { useState } from "react"
+import { Socials } from "../components/Socials";
 
 export const HeroPage = () => {
     const [copy, setCopy] = useState(false)
@@ -15,9 +16,7 @@ export const HeroPage = () => {
         try {
             await navigator.clipboard.writeText(textToCopy)
             setCopy(true)
-            setIsPopupOpen(true)
-            // Hide the alert after 3 seconds
-            setTimeout(() => setIsPopupOpen(false), 3000)
+            setTimeout(() => setCopy(false), 5000)
         } catch (err) {
             console.error("Copy failed:", err)
         }
@@ -25,7 +24,6 @@ export const HeroPage = () => {
 
     return (
         <>
-            <CharacterFollower />
             <div className='relative h-[100vh] w-[100vw] bg-black overflow-hidden'>
                 {/* Particle Background */}
                 <div className='absolute inset-0 z-0'>
@@ -70,9 +68,24 @@ export const HeroPage = () => {
                                     <p className="flex items-center gap-2">npx sanjoyxyz <IoMdCopy /></p>
                                 </Button>
                             </div>
+                            <div>
+                                <Socials />
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Bottom-right alert */}
+                {copy && (
+                    <Bubble
+                        bg="transparent"
+                        borderColor="white"
+                        direction="left"
+                        className="left-88 top-14">
+                        <p className="text-white">Copied to clipboard!</p>
+                        <p className="text-white text-sm">Paste it on terminal to see more :)</p>
+                    </Bubble>
+                )}
             </div>
         </>
     )
