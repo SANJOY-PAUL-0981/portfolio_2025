@@ -6,6 +6,7 @@ import { IoMdCopy } from "react-icons/io"
 import { FaArrowRight } from "react-icons/fa"
 import { useState } from "react"
 import { Socials } from "../components/Socials";
+import { Skills } from "../components/Skills";
 
 export const HeroPage = () => {
     const [copy, setCopy] = useState(false)
@@ -84,7 +85,7 @@ export const HeroPage = () => {
 
             {/* Skills Section */}
             <section className="flex justify-center min-h-[100vh]">
-                <p className="text-7xl">SKILLS</p>
+                <Skills />
             </section>
 
             {/* Bottom-right alert */}

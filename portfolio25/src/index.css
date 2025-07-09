@@ -20,5 +20,24 @@
   font-family: 'VT323', monospace;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
 @import 'pixel-retroui/dist/index.css';
 @import 'pixel-retroui/dist/fonts.css';
