@@ -8,6 +8,7 @@ import { useState } from "react"
 import { Socials } from "../components/Socials";
 import { Skills } from "../components/Skills";
 import RotatingText from "../components/ui/RotatingText"
+import { Projects } from "../components/Projects";
 
 export const HeroPage = () => {
     const [copy, setCopy] = useState(false)
@@ -99,6 +100,11 @@ export const HeroPage = () => {
             {/* Skills Section */}
             <section className="flex justify-center min-h-[100vh]">
                 <Skills />
+            </section>
+
+            {/*Project Section*/}
+            <section className="flex justify-center min-h-[100vh] py-40">
+                <Projects />
             </section>
 
             {/* Bottom-right alert */}
