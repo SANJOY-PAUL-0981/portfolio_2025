@@ -6,10 +6,13 @@ function App() {
   return (
     <>
       {/*UI COMPONENTS*/}
-      <CharacterFollower />
+      <ClickSpark>
+        <CharacterFollower />
+        
+        {/*PAGES*/}
+        <HeroPage />
+      </ClickSpark>
 
-      {/*PAGES*/}
-      <HeroPage />
     </>
   )
 }

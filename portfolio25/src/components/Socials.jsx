@@ -9,7 +9,7 @@ export const Socials = () => {
             <a
                 href="https://github.com/SANJOY-PAUL-0981"
                 target="_blank">
-                <FaGithub className="hover:text-red-500 duration-200 text-[27px]" />
+                <FaGithub className="hover:text-red-500 duration-200 text-[27px] hover:translate-y-2" />
             </a>
             <a
                 href="https://x.com/Sanj0yX"

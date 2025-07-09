@@ -40,10 +40,13 @@ export const HeroPage = () => {
 
             {/* Main Hero section */}
             <section className="min-h-screen flex justify-center items-center px-4">
-                <div className="flex flex-col lg:flex-row items-center gap-8 text-center lg:text-left">
+                <div className="flex flex-col lg:flex-row items-center gap-5 text-center lg:text-left">
                     <SplineModel />
                     <div className="flex flex-col gap-5">
                         <div className="text-left">
+                            <p className="text-8xl font-vt323">
+                                Hello World!
+                            </p>
                             <p className="text-8xl font-vt323">
                                 Hi I am <b className="text-red-500">Sanjoy</b> :)
                             </p>
@@ -80,8 +83,8 @@ export const HeroPage = () => {
             </section>
 
             {/* Skills Section */}
-            <section className="h-[60vh] flex justify-center items-center">
-                <h2 className="text-9xl">SKILLS</h2>
+            <section className="flex justify-center min-h-[100vh]">
+                <p className="text-7xl">SKILLS</p>
             </section>
 
             {/* Bottom-right alert */}
