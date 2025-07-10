@@ -1,13 +1,13 @@
 import { Card } from 'pixel-retroui';
-import C from "../../public/C.png"
-import Java from "../../public/java.png"
-import Js from "../../public/Js.png"
-import Mongo from "../../public/mongo.png"
-import Express from "../../public/express.png"
-import ReactLogo from "../../public/react.png"
-import Node from "../../public/Node.png"
-import Tailwind from "../../public/tailwind.png"
-import Git from "../../public/git.png"
+import C from "/C.png"
+import Java from "/java.png"
+import Js from "/Js.png"
+import Mongo from "/mongo.png"
+import Express from "/express.png"
+import ReactLogo from "/react.png"
+import Node from "/Node.png"
+import Tailwind from "/tailwind.png"
+import Git from "/git.png"
 
 const skills = [
     { name: "C Language", img: C },

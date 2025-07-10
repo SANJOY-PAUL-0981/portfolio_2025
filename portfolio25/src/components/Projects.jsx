@@ -36,7 +36,7 @@ export const Projects = () => {
                     borderColor='white'
                     shadowColor='black'>
                     <p className='text-2xl'>Tsukifetch</p>
-                    <p className='text-dotgothic text-sm text-red-500'>Tsukifetch is a CLI based System Information tool like neofetch. It is build in C language. I hope you guys will like it. If you faced any kind of error feel free to contact me.</p>
+                    <p className='text-dotgothic text-sm text-red-500'>Tsukifetch is a CLI based System Information tool like neofetch. From tsukifetch We can fetch system Informations like ram, gpu, processor, memory, used memory etc. Unfortunately it only works in Linux devices. It is build in C language. If you faced any kind of error feel free to contact me.</p>
                     <div className='flex'>
                         <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>C Language</Card>
                     </div>
