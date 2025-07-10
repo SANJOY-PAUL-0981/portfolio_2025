@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       {/*UI COMPONENTS*/}
-      <ClickSpark>
+      <ClickSpark sparkColor='red'>
         <CharacterFollower />
         
         {/*PAGES*/}

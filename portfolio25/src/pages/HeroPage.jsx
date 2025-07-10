@@ -9,8 +9,47 @@ import { Socials } from "../components/Socials";
 import { Skills } from "../components/Skills";
 import RotatingText from "../components/ui/RotatingText"
 import { Projects } from "../components/Projects";
+import { AboutMe } from "../components/AboutMe";
+import { Footer } from "../components/Footer";
+import {FloatingDock} from "../components/ui/floating-dock"
+import { FaHome } from "react-icons/fa";
+import { IoTerminalOutline } from "react-icons/io5";
+import { FaFolderOpen } from "react-icons/fa6";
+import { FaIdCard } from "react-icons/fa";
 
 export const HeroPage = () => {
+    const links = [
+        {
+            title: "Home",
+            icon: (
+                <FaHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+
+        {
+            title: "Skills",
+            icon: (
+                <IoTerminalOutline className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Projects",
+            icon: (
+                <FaFolderOpen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Id Card",
+            icon: (
+                <FaIdCard className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+    ];
+
     const [copy, setCopy] = useState(false)
 
     const textToCopy = 'npx sanjoyxyz'
@@ -106,6 +145,23 @@ export const HeroPage = () => {
             <section className="flex justify-center min-h-[100vh] py-40">
                 <Projects />
             </section>
+
+            {/*AboutMe Section*/}
+            <section className="flex justify-center min-h-[100vh] py-40">
+                <AboutMe />
+            </section>
+
+            {/*Footer*/}
+            <Footer />
+
+            {/*Dock*/}
+            <div className="flex items-center justify-center h-[35rem] w-full">
+                <FloatingDock
+                    mobileClassName="translate-y-20" // only for demo, remove for production
+                    items={links}
+                    className="bg-transparent"
+                />
+            </div>
 
             {/* Bottom-right alert */}
             {copy && (
