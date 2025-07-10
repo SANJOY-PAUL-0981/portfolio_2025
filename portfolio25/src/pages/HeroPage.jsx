@@ -11,7 +11,7 @@ import RotatingText from "../components/ui/RotatingText"
 import { Projects } from "../components/Projects";
 import { AboutMe } from "../components/AboutMe";
 import { Footer } from "../components/Footer";
-import {FloatingDock} from "../components/ui/floating-dock"
+import { FloatingDock } from "../components/ui/floating-dock"
 import { FaHome } from "react-icons/fa";
 import { IoTerminalOutline } from "react-icons/io5";
 import { FaFolderOpen } from "react-icons/fa6";
@@ -24,7 +24,7 @@ export const HeroPage = () => {
             icon: (
                 <FaHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#home",
         },
 
         {
@@ -32,21 +32,21 @@ export const HeroPage = () => {
             icon: (
                 <IoTerminalOutline className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#skills",
         },
         {
             title: "Projects",
             icon: (
                 <FaFolderOpen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#projects",
         },
         {
-            title: "Id Card",
+            title: "About Me",
             icon: (
                 <FaIdCard className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#about",
         },
     ];
 
@@ -65,7 +65,7 @@ export const HeroPage = () => {
     }
 
     return (
-        <div className="relative min-h-screen w-[99vw] text-white overflow-x-hidden">
+        <div className="relative min-h-screen w-[99vw] text-white overflow-x-hidden scroll-smooth">
             {/* Particle Background */}
             <div className="fixed inset-0 -z-10 bg-black">
                 <Particles
@@ -81,7 +81,7 @@ export const HeroPage = () => {
             </div>
 
             {/* Main Hero section */}
-            <section className="min-h-screen flex justify-center items-center px-4">
+            <section id="home" className="min-h-screen flex justify-center items-center px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-5 text-center lg:text-left">
                     <SplineModel />
                     <div className="flex flex-col gap-5">
@@ -137,30 +137,32 @@ export const HeroPage = () => {
             </section>
 
             {/* Skills Section */}
-            <section className="flex justify-center min-h-[100vh]">
+            <section id="skills" className="flex justify-center min-h-[100vh]">
                 <Skills />
             </section>
 
             {/*Project Section*/}
-            <section className="flex justify-center min-h-[100vh] py-40">
+            <section id="projects" className="flex justify-center min-h-[100vh] py-40">
                 <Projects />
             </section>
 
             {/*AboutMe Section*/}
-            <section className="flex justify-center min-h-[100vh] py-40">
+            <section id="about" className="flex justify-center min-h-[100vh] py-40">
                 <AboutMe />
             </section>
 
             {/*Footer*/}
             <Footer />
 
-            {/*Dock*/}
-            <div className="flex items-center justify-center h-[35rem] w-full">
-                <FloatingDock
-                    mobileClassName="translate-y-20" // only for demo, remove for production
-                    items={links}
-                    className="bg-transparent "
-                />
+            {/*Dock - sticky and interactive */}
+            <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center">
+                <div className="pointer-events-auto">
+                    <FloatingDock
+                        mobileClassName="translate-y-0"
+                        items={links}
+                        className="bg-transparent"
+                    />
+                </div>
             </div>
 
             {/* Bottom-right alert */}
