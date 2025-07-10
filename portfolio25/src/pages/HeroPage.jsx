@@ -159,7 +159,7 @@ export const HeroPage = () => {
                 <FloatingDock
                     mobileClassName="translate-y-20" // only for demo, remove for production
                     items={links}
-                    className="bg-transparent"
+                    className="bg-transparent "
                 />
             </div>
 
