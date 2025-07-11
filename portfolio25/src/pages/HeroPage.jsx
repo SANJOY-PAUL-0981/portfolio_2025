@@ -1,7 +1,6 @@
 import SplineModel from "../components/ui/SplineModel"
 import Particles from "../components/Particles"
-import { Button } from 'pixel-retroui'
-import { Bubble } from 'pixel-retroui';
+import { Button, Popup, Bubble, Input } from 'pixel-retroui'
 import { IoMdCopy } from "react-icons/io"
 import { FaArrowRight } from "react-icons/fa"
 import { useState } from "react"
@@ -50,7 +49,11 @@ export const HeroPage = () => {
         },
     ];
 
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [copy, setCopy] = useState(false)
+
+    const openPopup = () => setIsPopupOpen(true);
+    const closePopup = () => setIsPopupOpen(false);
 
     const textToCopy = 'npx sanjoyxyz'
 
@@ -62,6 +65,10 @@ export const HeroPage = () => {
         } catch (err) {
             console.error("Copy failed:", err)
         }
+    }
+
+    const handleSubmit = () => {
+        console.log("submitted")
     }
 
     return (
@@ -111,7 +118,7 @@ export const HeroPage = () => {
 
                         <div className="flex gap-5">
                             <Button
-                                onClick={() => console.log('Clicked!')}
+                                onClick={openPopup}
                                 borderColor="white"
                                 bg="black"
                                 textColor="white">
@@ -165,10 +172,43 @@ export const HeroPage = () => {
                 </div>
             </div>
 
+            {/*PopUp form*/}
+            <Popup
+                bg="#303030"
+                textColor="white"
+                baseBg="#252525"
+                isOpen={isPopupOpen}
+                onClose={closePopup}
+                className="text-center">
+                <p className="text-3xl mb-4">Welcome!</p>
+                <p className="mb-4"> Let's get in touch</p>
+                <form onSubmit={handleSubmit} className=" flex flex-col gap-4 items-center">
+                    <div className="flex flex-col items-start">
+                        <p>Full Name</p>
+                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Name" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <p>Email</p>
+                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Email" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <p>Subject</p>
+                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Email Subject" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <p>Body</p>
+                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw] h-20" placeholder="Enter Email Body" />
+                    </div>
+                    <Button bg="gray" type="submit" textColor="white" className=" w-20">
+                        Submit
+                    </Button>
+                </form>
+            </Popup>
+
             {/* Bottom-right alert */}
             {copy && (
                 <Bubble
-                    bg="transparent"
+                    bg="black"
                     borderColor="white"
                     direction="left"
                     className="fixed bottom-5 right-5 z-50">
