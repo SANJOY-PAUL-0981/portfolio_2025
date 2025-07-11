@@ -117,11 +117,11 @@ export const HeroPage = () => {
                             <p className="text-8xl font-vt323">
                                 Hi I am <b className="text-red-500">Sanjoy</b> :)
                             </p>
-                            <p className="text-red-500 font-dotgothic text-xl font-semibold flex items-center gap-2">
-                                Nice to meet you all, I am a passionate
+                            <p className="text-red-500 font-dotgothic text-xl font-semibold lg:flex lg:items-center gap-2">
+                                Nice to meet you all, I am a passionate -
                                 <RotatingText
                                     texts={['Web Developer', 'ML Enthusiast', 'CS Undergrad']}
-                                    mainClassName="px-2 w-[10vw] sm:px-2 md:px-3 bg-red-500 text-black overflow-hidden sm:py-1 md:py-2 justify-center rounded"
+                                    mainClassName="px-2 lg:w-[10vw] sm:px-2 md:px-3 bg-red-500 text-black overflow-hidden sm:py-1 md:py-2 justify-center rounded"
                                     staggerFrom={"last"}
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
@@ -134,26 +134,30 @@ export const HeroPage = () => {
                             </p>
                         </div>
 
-                        <div className="flex gap-5">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start sm:justify-start">
                             <Button
                                 onClick={openPopup}
                                 borderColor="white"
                                 bg="black"
-                                textColor="white">
+                                textColor="white"
+                            >
                                 <p className="flex items-center gap-2 px-5">
                                     Contact Me <FaArrowRight />
                                 </p>
                             </Button>
 
-                            <Button
-                                onClick={handleCopy}
-                                borderColor="white"
-                                bg="black"
-                                textColor="white">
-                                <p className="flex items-center gap-2">
-                                    npx sanjoyxyz <IoMdCopy />
-                                </p>
-                            </Button>
+                            <div className="hidden sm:block">
+                                <Button
+                                    onClick={handleCopy}
+                                    borderColor="white"
+                                    bg="black"
+                                    textColor="white"
+                                >
+                                    <p className="flex items-center gap-2">
+                                        npx sanjoyxyz <IoMdCopy />
+                                    </p>
+                                </Button>
+                            </div>
                         </div>
 
                         <Socials />
@@ -162,7 +166,7 @@ export const HeroPage = () => {
             </section>
 
             {/* Skills Section */}
-            <section id="skills" className="flex justify-center min-h-[100vh]">
+            <section id="skills" className="flex justify-center min-h-[80vh]">
                 <Skills />
             </section>
 
@@ -203,26 +207,26 @@ export const HeroPage = () => {
                 <form onSubmit={handleSubmit} className=" flex flex-col gap-4 items-center">
                     <div className="flex flex-col items-start">
                         <p>Full Name</p>
-                        <Input name="name" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Name" />
+                        <Input name="name" bg="#404040" textColor="white" borderColor="#151515" className="lg:w-[28vw] w-[70vw]" placeholder="Enter Your Name" />
                     </div>
                     <div className="flex flex-col items-start">
                         <p>Email</p>
-                        <Input name="email" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Email" />
+                        <Input name="email" bg="#404040" textColor="white" borderColor="#151515" className="lg:w-[28vw] w-[70vw]" placeholder="Enter Your Email" />
                     </div>
                     <div className="flex flex-col items-start">
                         <p>Subject</p>
-                        <Input name="title" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Email Subject" />
+                        <Input name="title" bg="#404040" textColor="white" borderColor="#151515" className="lg:w-[28vw] w-[70vw]" placeholder="Enter Email Subject" />
                     </div>
                     <div className="flex flex-col items-start">
                         <p>Message</p>
-                        <Input name="message" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw] h-20" placeholder="Enter Message" />
+                        <Input name="message" bg="#404040" textColor="white" borderColor="#151515" className="lg:w-[28vw] w-[70vw] h-20" placeholder="Enter Message" />
                     </div>
                     <Button bg="gray" type="submit" textColor="white" className=" w-20">
                         Submit
                     </Button>
                 </form>
             </Popup>
-            
+
             {/*Email Status PopUp*/}
             {emailStatus === "success" && (
                 <Bubble
