@@ -171,12 +171,12 @@ export const HeroPage = () => {
             </section>
 
             {/*Project Section*/}
-            <section id="projects" className="flex justify-center min-h-[100vh] py-40">
+            <section id="projects" className="flex justify-center min-h-[50vh] py-40">
                 <Projects />
             </section>
 
             {/*AboutMe Section*/}
-            <section id="about" className="flex justify-center min-h-[100vh] py-40">
+            <section id="about" className="flex justify-center min-h-[80vh] py-40">
                 <AboutMe />
             </section>
 

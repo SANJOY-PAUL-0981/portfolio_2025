@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa"
 export const Projects = () => {
     return (
         <div>
-            <p className="text-7xl text-white mb-8 text-center pb-40">PROJECTS</p>
+            <p className="lg:text-7xl text-5xl text-white mb-8 text-center pb-40">PROJECTS</p>
             <div className='flex flex-col lg:flex-row items-center gap-10'>
                 <Card
                     className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-5 justify-between'

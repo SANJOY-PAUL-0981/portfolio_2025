@@ -26,7 +26,7 @@ export const Skills = () => {
 
   return (
     <div className="relative overflow-hidden py-12">
-      <p className="text-5xl sm:text-6xl md:text-7xl text-white mb-8 text-center pb-10">SKILLS</p>
+      <p className="text-5xl sm:text-6xl md:text-7xl text-white mb-8 text-center pb-40">SKILLS</p>
 
       {/* Bento Grid on Mobile */}
       <div className="grid grid-cols-3 gap-4 px-4 sm:hidden">
