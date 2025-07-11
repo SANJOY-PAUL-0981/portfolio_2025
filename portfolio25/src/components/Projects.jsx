@@ -5,16 +5,16 @@ export const Projects = () => {
     return (
         <div>
             <p className="text-7xl text-white mb-8 text-center pb-40">PROJECTS</p>
-            <div className='flex gap-10'>
+            <div className='flex flex-col lg:flex-row items-center gap-10'>
                 <Card
-                    className='p-4 w-[25vw] flex flex-col gap-5 justify-between'
+                    className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-5 justify-between'
                     bg='transparent'
                     textColor='white'
                     borderColor='white'
                     shadowColor='black'>
                     <p className='text-2xl'>Cross Platform Student Management App</p>
                     <p className='text-dotgothic text-sm text-red-500'>This is a project which we made for our college, This app can run in both android and ios. The sole purpose of this app is save, manipulate and store the data of students in a structured manner. I basically did the backend part of this project.</p>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-wrap lg:flex-nowrap gap-2'>
                         <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>Flutter</Card>
                         <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ExpressJS</Card>
                         <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ReactJS</Card>
@@ -30,7 +30,7 @@ export const Projects = () => {
                 </Card>
 
                 <Card
-                    className='p-4 w-[25vw] flex flex-col justify-between'
+                    className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-6 justify-between'
                     bg='transparent'
                     textColor='white'
                     borderColor='white'
