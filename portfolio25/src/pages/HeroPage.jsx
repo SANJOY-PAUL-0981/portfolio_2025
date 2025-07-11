@@ -184,10 +184,9 @@ export const HeroPage = () => {
             <Footer />
 
             {/*Dock - sticky and interactive */}
-            <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center">
+            <div className="fixed bottom-14 left-0 w-full z-50 flex justify-center">
                 <div className="pointer-events-auto">
                     <FloatingDock
-                        mobileClassName="translate-y-0"
                         items={links}
                         className="bg-transparent"
                     />
