@@ -90,7 +90,7 @@ export const HeroPage = () => {
     };
 
     return (
-        <div className="relative min-h-screen w-[99vw] text-white overflow-x-hidden scroll-smooth">
+        <div className="relative min-h-[90vh] w-[99vw] text-white overflow-x-hidden scroll-smooth">
             {/* Particle Background */}
             <div className="fixed inset-0 -z-10 bg-black">
                 <Particles

@@ -37,7 +37,7 @@ export const Skills = () => {
             textColor="white"
             borderColor="white"
             shadowColor="black"
-            className="flex flex-col items-center justify-center p-3"
+            className="flex flex-col items-center justify-around p-3"
           >
             <img src={skill.img} alt={skill.name} className="h-16 mb-2 object-contain" />
             <p className="text-center text-xs">{skill.name}</p>
