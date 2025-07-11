@@ -15,6 +15,7 @@ import { FaHome } from "react-icons/fa";
 import { IoTerminalOutline } from "react-icons/io5";
 import { FaFolderOpen } from "react-icons/fa6";
 import { FaIdCard } from "react-icons/fa";
+import emailjs from 'emailjs-com';
 
 export const HeroPage = () => {
     const links = [
@@ -51,6 +52,7 @@ export const HeroPage = () => {
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [copy, setCopy] = useState(false)
+    const [emailStatus, setEmailStatus] = useState(null);
 
     const openPopup = () => setIsPopupOpen(true);
     const closePopup = () => setIsPopupOpen(false);
@@ -67,9 +69,25 @@ export const HeroPage = () => {
         }
     }
 
-    const handleSubmit = () => {
-        console.log("submitted")
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_mhvnape',
+            'template_mj7bot2',
+            e.target,
+            'sPWUmQgtEvQyIeFHs'
+        ).then((result) => {
+            console.log('Email successfully sent:', result.text);
+            setEmailStatus("success");
+            setTimeout(() => setEmailStatus(null), 5000);
+            closePopup();
+        }).catch((error) => {
+            console.error('Error sending email:', error);
+            setEmailStatus("error");
+            setTimeout(() => setEmailStatus(null), 5000);
+        });
+    };
 
     return (
         <div className="relative min-h-screen w-[99vw] text-white overflow-x-hidden scroll-smooth">
@@ -185,25 +203,50 @@ export const HeroPage = () => {
                 <form onSubmit={handleSubmit} className=" flex flex-col gap-4 items-center">
                     <div className="flex flex-col items-start">
                         <p>Full Name</p>
-                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Name" />
+                        <Input name="name" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Name" />
                     </div>
                     <div className="flex flex-col items-start">
                         <p>Email</p>
-                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Email" />
+                        <Input name="email" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Your Email" />
                     </div>
                     <div className="flex flex-col items-start">
                         <p>Subject</p>
-                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Email Subject" />
+                        <Input name="title" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw]" placeholder="Enter Email Subject" />
                     </div>
                     <div className="flex flex-col items-start">
-                        <p>Body</p>
-                        <Input bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw] h-20" placeholder="Enter Email Body" />
+                        <p>Message</p>
+                        <Input name="message" bg="#404040" textColor="white" borderColor="#151515" className="w-[28vw] h-20" placeholder="Enter Message" />
                     </div>
                     <Button bg="gray" type="submit" textColor="white" className=" w-20">
                         Submit
                     </Button>
                 </form>
             </Popup>
+            
+            {/*Email Status PopUp*/}
+            {emailStatus === "success" && (
+                <Bubble
+                    bg="black"
+                    borderColor="white"
+                    direction="left"
+                    className="fixed bottom-5 right-5 z-50"
+                >
+                    <p className="text-green-400">Email sent successfully!</p>
+                    <p className="text-white text-sm">I'll get back to you soon :)</p>
+                </Bubble>
+            )}
+
+            {emailStatus === "error" && (
+                <Bubble
+                    bg="black"
+                    borderColor="white"
+                    direction="left"
+                    className="fixed bottom-5 right-5 z-50"
+                >
+                    <p className="text-red-500">Failed to send email.</p>
+                    <p className="text-white text-sm">Please try again later.</p>
+                </Bubble>
+            )}
 
             {/* Bottom-right alert */}
             {copy && (
