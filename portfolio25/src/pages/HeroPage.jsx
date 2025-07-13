@@ -90,9 +90,9 @@ export const HeroPage = () => {
     };
 
     return (
-        <div className="relative min-h-[90vh] w-[99vw] text-white overflow-x-hidden scroll-smooth">
+        <div className="relative lg:min-h-[90vh] min-h-dvh lg:w-[99vw] text-white overflow-x-hidden scroll-smooth">
             {/* Particle Background */}
-            <div className="fixed inset-0 -z-10 bg-black">
+            <div className="fixed inset-0 -z-10 bg-black h-dvh overflow-hidden">
                 <Particles
                     particleColors={['#ffffff', '#ffffff']}
                     particleCount={500}
@@ -104,17 +104,16 @@ export const HeroPage = () => {
                     disableRotation={true}
                 />
             </div>
-
             {/* Main Hero section */}
             <section id="home" className="min-h-screen flex justify-center items-center px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-5 text-center lg:text-left">
                     <SplineModel />
                     <div className="flex flex-col gap-5">
                         <div className="text-left">
-                            <p className="text-8xl font-vt323">
+                            <p className="lg:text-8xl text-[54px] lg:font-normal font-semibold font-vt323">
                                 Hello World!
                             </p>
-                            <p className="text-8xl font-vt323">
+                            <p className="lg:text-8xl text-[54px] lg:font-normal font-semibold font-vt323">
                                 Hi I am <b className="text-red-500">Sanjoy</b> :)
                             </p>
                             <p className="text-red-500 font-dotgothic text-xl font-semibold lg:flex lg:items-center gap-2">
