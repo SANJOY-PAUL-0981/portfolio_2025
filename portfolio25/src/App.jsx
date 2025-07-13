@@ -1,7 +1,7 @@
 import './App.css'
 import { HeroPage } from './pages/HeroPage'
-import CharacterFollower from './components/ui/CharacterFollower'
-import ClickSpark from './components/ui/ClickSpark'
+import CharacterFollower from './components/UI/CharacterFollower'
+import ClickSpark from './components/UI/ClickSpark'
 function App() {
   return (
     <>

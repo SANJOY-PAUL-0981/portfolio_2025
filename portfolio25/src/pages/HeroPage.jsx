@@ -1,4 +1,4 @@
-import SplineModel from "../components/ui/SplineModel"
+import SplineModel from "../components/UI/SplineModel"
 import Particles from "../components/Particles"
 import { Button, Popup, Bubble, Input } from 'pixel-retroui'
 import { IoMdCopy } from "react-icons/io"
@@ -6,11 +6,11 @@ import { FaArrowRight } from "react-icons/fa"
 import { useState } from "react"
 import { Socials } from "../components/Socials";
 import { Skills } from "../components/Skills";
-import RotatingText from "../components/ui/RotatingText"
+import RotatingText from "../components/UI/RotatingText"
 import { Projects } from "../components/Projects";
 import { AboutMe } from "../components/AboutMe";
 import { Footer } from "../components/Footer";
-import { FloatingDock } from "../components/ui/floating-dock"
+import { FloatingDock } from "../components/UI/floating-dock"
 import { FaHome } from "react-icons/fa";
 import { IoTerminalOutline } from "react-icons/io5";
 import { FaFolderOpen } from "react-icons/fa6";
