@@ -28,7 +28,7 @@ export const Skills = () => {
     <div className="relative overflow-hidden py-12">
       <p className="text-5xl sm:text-6xl md:text-7xl text-white mb-8 text-center pb-40">SKILLS</p>
 
-      {/* Bento Grid on Mobile */}
+      {/* Mobile */}
       <div className="grid grid-cols-3 gap-4 px-4 sm:hidden">
         {skills.map((skill, idx) => (
           <Card
@@ -45,7 +45,7 @@ export const Skills = () => {
         ))}
       </div>
 
-      {/* Scrolling Skills for sm and up */}
+      {/* Skills scrolling loop */}
       <div className="hidden sm:block">
         {/* Shadow edges */}
         <div className="pointer-events-none absolute top-0 left-0 h-full w-24 z-10 bg-gradient-to-r from-black to-transparent"></div>

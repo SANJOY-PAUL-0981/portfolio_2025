@@ -182,7 +182,7 @@ export const HeroPage = () => {
             {/*Footer*/}
             <Footer />
 
-            {/*Dock - sticky and interactive */}
+            {/*Dock*/}
             <div className="fixed bottom-14 left-0 w-full z-50 flex justify-center">
                 <div className="pointer-events-auto">
                     <FloatingDock
@@ -250,7 +250,7 @@ export const HeroPage = () => {
                 </Bubble>
             )}
 
-            {/* Bottom-right alert */}
+            {/* Bottom right alert */}
             {copy && (
                 <Bubble
                     bg="black"
