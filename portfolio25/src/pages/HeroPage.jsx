@@ -231,7 +231,7 @@ export const HeroPage = () => {
                     bg="black"
                     borderColor="white"
                     direction="left"
-                    className="fixed bottom-5 right-5 z-50"
+                    className="fixed lg:bottom-5 lg:right-5 top-5 right-5 z-50"
                 >
                     <p className="text-green-400">Email sent successfully!</p>
                     <p className="text-white text-sm">I'll get back to you soon :)</p>
@@ -243,7 +243,7 @@ export const HeroPage = () => {
                     bg="black"
                     borderColor="white"
                     direction="left"
-                    className="fixed bottom-5 right-5 z-50"
+                    className="fixed lg:bottom-5 lg:right-5 top-5 right-5 z-50"
                 >
                     <p className="text-red-500">Failed to send email.</p>
                     <p className="text-white text-sm">Please try again later.</p>
