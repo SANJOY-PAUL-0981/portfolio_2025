@@ -49,6 +49,29 @@ export const Projects = () => {
                         </Card>
                     </div>
                 </Card>
+
+                <Card
+                    className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-6 justify-between'
+                    bg='transparent'
+                    textColor='white'
+                    borderColor='white'
+                    shadowColor='black'>
+                    <p className='text-2xl'>Clipr</p>
+                    <p className='text-dotgothic text-sm text-red-500'>Clipr is a URL shortener tool available as both a browser extension and a website. It helps convert long, messy URLs into clean and short links. Built using React for the frontend, Express for the backend, and MongoDB for the database. Simple, fast, and efficient. Trim your links easily with Clipr today!</p>
+                    <div className='flex flex-wrap lg:flex-nowrap gap-2'>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>MongoDb</Card>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ExpressJS</Card>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ReactJS</Card>
+                    </div>
+                    <div className='flex justify-end'>
+                        <Card borderColor='white' textColor='white' shadowColor='white'>
+                            <a
+                                className='flex items-center gap-2 font-xs'
+                                href='https://github.com/SANJOY-PAUL-0981/Clipr'
+                                target='blank_'>Learn More <FaArrowRight /></a>
+                        </Card>
+                    </div>
+                </Card>
             </div>
         </div>
     )
