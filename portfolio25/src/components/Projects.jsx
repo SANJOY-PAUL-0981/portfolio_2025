@@ -5,7 +5,7 @@ export const Projects = () => {
     return (
         <div>
             <p className="lg:text-7xl text-5xl text-white mb-8 text-center pb-40">PROJECTS</p>
-            <div className='flex flex-col lg:flex-row items-center gap-10'>
+            <div className='flex flex-col lg:flex-row items-center gap-10 mb-10'>
                 <Card
                     className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-5 justify-between'
                     bg='transparent'
@@ -68,6 +68,31 @@ export const Projects = () => {
                             <a
                                 className='flex items-center gap-2 font-xs'
                                 href='https://github.com/SANJOY-PAUL-0981/Clipr'
+                                target='blank_'>Learn More <FaArrowRight /></a>
+                        </Card>
+                    </div>
+                </Card>
+            </div>
+
+            <div className='flex flex-col lg:flex-row items-center gap-10'>
+                <Card
+                    className='p-4 lg:w-[25vw] w-[85vw] flex flex-col gap-5 justify-between'
+                    bg='transparent'
+                    textColor='white'
+                    borderColor='white'
+                    shadowColor='black'>
+                    <p className='text-2xl'>LearnAI</p>
+                    <p className='text-dotgothic text-sm text-red-500'>LearnAI is a smart chatbot platform that lets users have AI-powered conversations based on YouTube videos. Simply paste a video link, and LearnAI generates interactive, insightful chats to help you understand content better, faster, and in a more engaging way.</p>
+                    <div className='flex flex-wrap lg:flex-nowrap gap-2'>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>MongoDB</Card>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ExpressJS</Card>
+                        <Card borderColor='white' textColor='black' bg='white' className='font-semibold text-sm'>ReactJS</Card>
+                    </div>
+                    <div className='flex justify-end'>
+                        <Card borderColor='white' textColor='white' shadowColor='white'>
+                            <a
+                                className='flex items-center gap-2 font-xs'
+                                href='https://github.com/SANJOY-PAUL-0981/LearnAI'
                                 target='blank_'>Learn More <FaArrowRight /></a>
                         </Card>
                     </div>
